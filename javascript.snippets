@@ -1,0 +1,43 @@
+snippet httpget "http get promise"
+return $http({
+	url: '${1}',
+	method: 'GET',
+	headers: {
+		'Content-Type': 'application/x-www-form-urlencoded'
+	},
+	params: {
+		method: '${2}',
+		returnFormat: 'json'
+		'${3}'
+	}
+}).then(function (response) {
+	callback(response);
+}, function (response) {
+	// if error
+	callback(response);
+});
+endsnippet
+
+snippet httppost "http post promise"
+return $http({
+	url: '${1}',
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/x-www-form-urlencoded'
+	},
+	params: {
+		method: '${2}',
+		returnFormat: 'json'
+		'${3}'
+	}
+}).then(function (response) {
+	callback(response);
+}, function (response) {
+	// if error
+	callback(response);
+});
+endsnippet
+
+snippet jasmineglobal "global variables for jasmine"
+/*global describe, beforeEach, inject, expect, it*/
+endsnippet
